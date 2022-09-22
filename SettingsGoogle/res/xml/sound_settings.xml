@@ -189,6 +189,13 @@
         android:order="-20"
         android:title="@string/boot_sounds_title" />
 
+    <!-- Screenshot sounds -->
+    <SwitchPreference
+        android:key="screenshot_sounds"
+        android:order="-21"
+        android:title="@string/screenshot_sound_title" />
+
+
     <!-- Charging sounds -->
     <SwitchPreference
         android:key="charging_sounds"
