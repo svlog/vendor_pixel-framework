@@ -46,12 +46,14 @@ import com.android.systemui.qs.tiles.QuickAccessWalletTile;
 import com.android.systemui.qs.tiles.ReduceBrightColorsTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
+import com.android.systemui.qs.tiles.SyncTile;
 import com.android.systemui.qs.tiles.UiModeNightTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.qs.tiles.WorkModeTile;
 import com.android.systemui.util.leak.GarbageMonitor;
 import com.google.android.systemui.qs.tiles.BatterySaverTileGoogle;
 import com.google.android.systemui.qs.tiles.ReverseChargingTile;
+
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -97,7 +99,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<QRCodeScannerTile> qrCodeScannerTileProvider,
             Provider<OneHandedModeTile> oneHandedModeTileProvider,
             Provider<ColorCorrectionTile> colorCorrectionTileProvider,
-            Provider<ReverseChargingTile> reverseChargingTileProvider) {
+            Provider<ReverseChargingTile> reverseChargingTileProvider,
+            Provider<SyncTile> syncTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -128,7 +131,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 quickAccessWalletTileProvider,
                 qrCodeScannerTileProvider,
                 oneHandedModeTileProvider,
-                colorCorrectionTileProvider);
+                colorCorrectionTileProvider,
+                syncTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
